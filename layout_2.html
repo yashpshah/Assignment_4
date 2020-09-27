@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2</title>
+    <style>
+        body {
+            margin: 20px auto;
+            width: 960px;
+            font-family: sans-serif;
+        }
+
+        div,
+        footer {
+            background: silver;
+        }
+
+        nav,
+        main,
+        footer {
+            display: grid;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            grid-template: 70px / 200px 500px;
+            grid-gap: 20px;
+            justify-content: space-between;
+        }
+
+        nav div:last-of-type {
+            align-self: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            height: 40px;
+            grid-template: auto / repeat(4, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+            align-content: center;
+        }
+
+        main {
+            height: 500px;
+            grid-template: repeat(3, 160px) / repeat(3, 313px);
+            grid-gap: 10px;
+            align-content: center;
+        }
+
+        footer {
+            height: 50px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            display: inline;
+            align-items: center;
+            justify-items: center;
+        }
+        h1{
+            font-size: 2.6rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>Company Logo</div>
+        <div>
+            <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+                <li><a href="#">Item 4</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>Lorem ipsum dolor sit amet, ne saepe<br> phaedrum cotidieque has, natum zril pro ei.</h1>
+        <h2>Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus. Qui an recteque maluisset
+            assentior, cu ferri aperiam imperdiet sed.</h2>
+    </header>
+    <main>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+    <footer>
+        <p>Copyright Notice</p>
+    </footer>
+</body>
+</html>

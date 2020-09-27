@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1</title>
+    <style>
+        body {
+            margin: 20px auto;
+            width: 960px;
+            font-family: sans-serif;
+        }
+
+        div,
+        footer {
+            background: silver;
+        }
+
+        nav,
+        section,
+        main,
+        footer {
+            display: grid;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            grid-template: 70px / 200px 500px;
+            grid-gap: 20px;
+            justify-content: space-between;
+        }
+
+        nav div:last-of-type {
+            align-self: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            height: 40px;
+            grid-template: auto / repeat(4, 1fr);
+            grid-gap: 20px;
+            justify-items: center;
+            align-content: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        section {
+            grid-template-rows: 300px;
+        }
+
+        main {
+            height: 160px;
+            grid-template: 160px / repeat(2, 470px);
+            grid-gap: 20px;
+            align-content: center;
+        }
+
+        footer {
+            height: 50px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            display: inline;
+            align-items: center;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>Company Logo</div>
+        <div>
+            <ul>
+                <li><a href="#">Item 1</a></li>
+                <li><a href="#">Item 2</a></li>
+                <li><a href="#">Item 3</a></li>
+                <li><a href="#">Item 4</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <div>Featured Product Image</div>
+    </section>
+    <main>
+        <div>Product 1</div>
+        <div>Product 2</div>
+    </main>
+    <footer>
+        <p>Copyright Notice</p>
+    </footer>
+    
+</body>
+</html>
